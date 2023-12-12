@@ -6,24 +6,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fontes</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .centralizado  {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Montserrat:wght@300;700&family=Wallpoet&display=swap" rel="stylesheet">
+       .conteudo {
+        margin-top: 100px; /* Espaço entre o topo da tela e o conteúdo */
+    }
+
+       body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+       }
+
+       /* Estilo para exibir letras lado a lado */
+    .letra {   
+      display: inline-block; /* Faz com que cada letra fique ao lado da outra */
+      margin-right: 5px; /* Espaço entre as letras */
+      font-size: 50px;
+    }
+
+    .v{
+        font-size: 16px;
+        margin-top: 150px;
+        text-align: center;
+    }
+
+    textarea::placeholder {
+    color: white; /* Cor desejada para o texto do placeholder */
+    font-size: 16px;
+    }
+
+    </style>
+
 </head>
-<body>
-    
-<form class="container" method="post">
-    <div>
-        <textarea name="texto_origem" rows="4" cols="50" placeholder="Escreva texto normal aqui"></textarea>
-    </div>
-    <div class="container">
-         <textarea name="texto_destino" rows="4" cols="50" style="font-family: Wallpoet, son-serif;" placeholder="Texto mudara"></textarea>;
-    </div>
-        <input type="submit" value="Aplicar Estilos">
-    </form>
 
-    <script src="script.js"></script>
+<body class="text-bg-dark p-3">
+    <div>
+        <div class="container">
+            <!-- Letras lado a lado usando CSS -->
+            <div class="conteudo">
+              <span class="letra" style="color: #F49D37 ;">V</span>
+              <span class="letra" style="color: #F49D37 ;">A</span>
+              <span class="letra" style="color: #F49D37 ;">L</span>
+              <span class="letra" style="color: #F49D37;">H</span>
+              <span class="letra" style="color: #140F2D;">A</span>
+              <span class="letra" style="color: #140F2D;">L</span>
+              <span class="letra" style="color: #140F2D;">L</span>
+              <span class="letra" style="color: #140F2D;">A</span>
+              <span class="letra" style="color: #F49D37;;">-</span>
+              <span class="letra">F</span>
+              <span class="letra">O</span>
+              <span class="letra">N</span>
+              <span class="letra">T</span>
+              <span class="letra">S</span>
+            </div>
+        <form class=" centralizado d-flex" method="post">
+            <div >
+                <textarea style="font-size: 40px;" class="text-bg-secondary p-3 rounded-4 border border-2 border-black" name="texto_origem" cols="40" rows="4" placeholder="Escreva texto normal aqui"></textarea>
+            </div>
+            <div >
+                 <textarea  style="font-size: 40px;" class="text-bg-secondary p-3 rounded-4 border border-2 border-black mx-3" name="texto_destino" cols="40" rows="4"  placeholder="Texto mudara"></textarea>
+            </div>
+            </form>
+        
+            <script src="script.js"></script>
+    </div>
+    <div class="v">
+        <span>Desenvolvido Pela Valhalla-Enterpreise</span>
+    </div>
 </body>
 </html>
